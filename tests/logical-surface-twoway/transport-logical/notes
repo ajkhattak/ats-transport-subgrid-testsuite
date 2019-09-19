@@ -1,0 +1,7 @@
+Date: September 18, 2019
+
+ATS v0.87: test-old : transport-v0.87.xml, transport needs a flow run to get face directions
+
+ATS v0.88: test-new: transport-v0.88.xml, transport does not need any run flow. flux are prescribed in the inputfile for both stream and subgrid model
+
+ATS v0.88: test-updated: transport-v0.88-updated.xml, ponded depth is set to 1, and the cross-sectional area is 2D now
