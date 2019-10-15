@@ -1,0 +1,27 @@
+- Several tests are performed for the verificaiton of the transport model using logical meshes
+- All tests correspond to surface transport (no subgrid) on Y-mesh
+- ATS version : v0.88 (remmember it avoid flow simulation!)
+
+#--------------------------------------------------------------------
+Suite #1:
+Q1 = Discharge [m^3/sec] in the main stream
+Q2 = Discharge [m^3/sec] in the main_left child stream
+Q3 = Discharge [m^3/sec] in the main_right child stream
+
+test1_Y: Q1 = Q2 + Q3, Q2 = Q3
+test2_Y: Q1 = Q2 + Q3, Q2 > Q3
+test3_Y: Q1 > Q2 + Q3, Q2 > Q3
+
+#-------------------------------------------------------------------
+
+test4_Y: prescribed face fluxes and read Y-mesh from .xml file
+
+test5_Y: Read face fluxes from HDF5 file and Y-mesh from .xml file
+
+Note:
+- in HDF5 files, number of face fluxes are "number of cells + number of junctions"
+For example, Y-mesh with 2 cells each segment. Total #faces = 8
+| | |
+     x| | | 
+| | | 
+the flux at the x face is not given in the .h5 file, its computed from the fluxes of child streams (upstreams). This ensures continuity of fluxes.

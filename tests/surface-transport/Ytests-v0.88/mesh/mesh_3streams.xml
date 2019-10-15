@@ -1,0 +1,39 @@
+<ParameterList name="Main">
+  <Parameter name="infer cell centroids" type="bool" value="true"/>
+  <ParameterList name="segments">
+    <ParameterList name="main_stream">
+      <Parameter name="first tip" type="Array(double)" value="{0.,0.,0.}"/>
+      <Parameter name="first tip type" type="string" value="boundary"/>
+      <Parameter name="last tip type" type="string" value="junction"/>
+      <Parameter name="orientation" type="Array(double)" value="{1.,0.,0.}"/>
+      <Parameter name="segment length [m]" type="double" value="1000.0"/>
+      <Parameter name="number of cells" type="int" value="10"/>
+      <Parameter name="cross sectional area [m^2]" type="double" value="1.0"/>
+    </ParameterList>
+    <ParameterList name="main_left" type="ParameterList">
+      <Parameter name="first tip type" type="string" value="branch" />
+      <Parameter name="first tip branch segment" type="string" value="main_stream"/>
+      <Parameter name="first tip branch segment tip" type="string" value="last"/>
+      <Parameter name="last tip type" type="string" value="boundary" />
+      <Parameter name="orientation" type="Array(double)" value="{1.,1.,0.}"/>
+      <Parameter name="segment length [m]" type="double" value="1000" />
+      <Parameter name="number of cells" type="int" value="10" />
+      <Parameter name="cross sectional area [m^2]" type="double" value="0.75" />
+    </ParameterList>
+    
+    <ParameterList name="main_right" type="ParameterList">
+      <Parameter name="first tip type" type="string" value="branch" />
+      <Parameter name="first tip branch segment" type="string" value="main_stream"/>
+      <Parameter name="first tip branch segment tip" type="string" value="last"/>
+      <Parameter name="last tip type" type="string" value="boundary" />      
+      <Parameter name="orientation" type="Array(double)" value="{1.,-1.,0.}"/>
+      <Parameter name="segment length [m]" type="double" value="1000" />
+      <Parameter name="number of cells" type="int" value="10" />
+      <Parameter name="cross sectional area [m^2]" type="double" value="0.25" />
+    </ParameterList>
+    
+  </ParameterList>
+  <ParameterList name="sets" type="bool" value="true">
+    <Parameter name="fine_root" type="Array(string)" value="{main_left, main_right}"/>
+  </ParameterList>
+</ParameterList>
