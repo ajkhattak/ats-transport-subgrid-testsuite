@@ -1,9 +1,9 @@
-- Several tests are performed for the verificaiton of the transport model using logical meshes
+- Several tests are performed for the verification of the transport model using logical meshes
 - All tests correspond to surface transport (no subgrid) on Y-mesh
 - ATS version : v0.88 (remmember it avoid flow simulation!)
 
 #--------------------------------------------------------------------
-Suite #1:
+
 Q1 = Discharge [m^3/sec] in the main stream
 Q2 = Discharge [m^3/sec] in the main_left child stream
 Q3 = Discharge [m^3/sec] in the main_right child stream
