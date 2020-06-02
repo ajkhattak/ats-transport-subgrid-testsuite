@@ -42,16 +42,86 @@
     </ParameterList>
   </ParameterList>
 
-  <ParameterList name="regions" type="ParameterList">
+
+<ParameterList name="regions" type="ParameterList">
     <ParameterList name="surface domain" type="ParameterList">
       <ParameterList name="region: all" type="ParameterList"/>
     </ParameterList>
 
-    <ParameterList name="tracer source surface" type="ParameterList">
-      <ParameterList name="region: enumerated set" type="ParameterList">
-        <Parameter name="entity" type="string" value="cell" />
-        <Parameter name="entity gids" type="Array(int)" value="{227, 453, 519, 565, 606, 710, 810, 851, 897, 931, 985}"/> 
-	<!-- first order streams gids-->
+    <ParameterList name="tracer source stream_3_10" type="ParameterList">
+      <ParameterList name="region: enumerated set from file" type="ParameterList">
+	<Parameter name="read from file" type="string" value="../regions/coweeta-region-1st-reaches.xml" />
+	<Parameter name="region name" type="string" value="stream_3_10" />
+      </ParameterList>
+    </ParameterList>
+
+    <ParameterList name="tracer source stream_5_6" type="ParameterList">
+      <ParameterList name="region: enumerated set from file" type="ParameterList">
+	<Parameter name="read from file" type="string" value="../regions/coweeta-region-1st-reaches.xml" />
+	<Parameter name="region name" type="string" value="stream_5_6" />
+      </ParameterList>
+    </ParameterList>
+
+    <ParameterList name="tracer source stream_5_7" type="ParameterList">
+      <ParameterList name="region: enumerated set from file" type="ParameterList">
+	<Parameter name="read from file" type="string" value="../regions/coweeta-region-1st-reaches.xml" />
+	<Parameter name="region name" type="string" value="stream_5_7" />
+      </ParameterList>
+    </ParameterList>
+
+    <ParameterList name="tracer source stream_8_9" type="ParameterList">
+      <ParameterList name="region: enumerated set from file" type="ParameterList">
+	<Parameter name="read from file" type="string" value="../regions/coweeta-region-1st-reaches.xml" />
+	<Parameter name="region name" type="string" value="stream_8_9" />
+      </ParameterList>
+    </ParameterList>
+
+    <ParameterList name="tracer source stream_11_12" type="ParameterList">
+      <ParameterList name="region: enumerated set from file" type="ParameterList">
+	<Parameter name="read from file" type="string" value="../regions/coweeta-region-1st-reaches.xml" />
+	<Parameter name="region name" type="string" value="stream_11_12" />
+      </ParameterList>
+    </ParameterList>
+
+    <ParameterList name="tracer source stream_14_15" type="ParameterList">
+      <ParameterList name="region: enumerated set from file" type="ParameterList">
+	<Parameter name="read from file" type="string" value="../regions/coweeta-region-1st-reaches.xml" />
+	<Parameter name="region name" type="string" value="stream_14_15" />
+      </ParameterList>
+    </ParameterList>
+
+    <ParameterList name="tracer source stream_16_20" type="ParameterList">
+      <ParameterList name="region: enumerated set from file" type="ParameterList">
+	<Parameter name="read from file" type="string" value="../regions/coweeta-region-1st-reaches.xml" />
+	<Parameter name="region name" type="string" value="stream_16_20" />
+      </ParameterList>
+    </ParameterList>
+
+    <ParameterList name="tracer source stream_17_18" type="ParameterList">
+      <ParameterList name="region: enumerated set from file" type="ParameterList">
+	<Parameter name="read from file" type="string" value="../regions/coweeta-region-1st-reaches.xml" />
+	<Parameter name="region name" type="string" value="stream_17_18" />
+      </ParameterList>
+    </ParameterList>
+
+    <ParameterList name="tracer source stream_17_19" type="ParameterList">
+      <ParameterList name="region: enumerated set from file" type="ParameterList">
+	<Parameter name="read from file" type="string" value="../regions/coweeta-region-1st-reaches.xml" />
+	<Parameter name="region name" type="string" value="stream_17_19" />
+      </ParameterList>
+    </ParameterList>
+
+    <ParameterList name="tracer source stream_21_22" type="ParameterList">
+      <ParameterList name="region: enumerated set from file" type="ParameterList">
+	<Parameter name="read from file" type="string" value="../regions/coweeta-region-1st-reaches.xml" />
+	<Parameter name="region name" type="string" value="stream_21_22" />
+      </ParameterList>
+    </ParameterList>
+
+    <ParameterList name="tracer source stream_21_23" type="ParameterList">
+      <ParameterList name="region: enumerated set from file" type="ParameterList">
+	<Parameter name="read from file" type="string" value="../regions/coweeta-region-1st-reaches.xml" />
+	<Parameter name="region name" type="string" value="stream_21_23" />
       </ParameterList>
     </ParameterList>
 
@@ -242,31 +312,262 @@
 
       <ParameterList name="source terms" type="ParameterList">
         <ParameterList name="concentration" type="ParameterList">
-          <ParameterList name="Tracer1" type="ParameterList">
+          <ParameterList name="Tracer" type="ParameterList">
             <!-- input source term, in the first cell -->
-            <ParameterList name="SOURCE: Tracer" type="ParameterList">
-	      <Parameter name="regions" type="Array(string)" value="{tracer source surface}" />
+	    
+	    <ParameterList name="SOURCE: Tracer region1" type="ParameterList">
+	      <Parameter name="regions" type="Array(string)" value="{tracer source stream_3_10}" />
               <Parameter name="spatial distribution method" type="string" value="volume" />
 	      <Parameter name="component names" type="Array(string)" value="{Tracer1,Tracer2}" />
               <ParameterList name="sink" type="ParameterList">
 		<Parameter name="number of dofs" type="int" value="2"/>
 		<ParameterList name="dof 1 function">
                   <ParameterList name="function-tabular" type="ParameterList">
-                    <Parameter name="y values" type="Array(double)" value="{0.1,0.0}" /><!--Moles/sec-->
+                    <Parameter name="y values" type="Array(double)" value="{0.000992,0.0}" /><!--Moles/sec-->
                     <Parameter name="x values" type="Array(double)" value="{0.0,18000}" />
                     <Parameter name="forms" type="Array(string)" value="{constant}" />
                   </ParameterList>
 		</ParameterList>
 		<ParameterList name="dof 2 function">
                   <ParameterList name="function-tabular" type="ParameterList">
-                    <Parameter name="y values" type="Array(double)" value="{0.2,0.0}" /><!--Moles/sec-->
+                    <Parameter name="y values" type="Array(double)" value="{0.000992,0.0}" /><!--Moles/sec-->
                     <Parameter name="x values" type="Array(double)" value="{0.0,18000}" />
                     <Parameter name="forms" type="Array(string)" value="{constant}" />
                   </ParameterList>
 		</ParameterList>
               </ParameterList>
 	    </ParameterList>
-            
+
+	    <ParameterList name="SOURCE: Tracer region2" type="ParameterList">
+	      <Parameter name="regions" type="Array(string)" value="{tracer source stream_5_6}" />
+              <Parameter name="spatial distribution method" type="string" value="volume" />
+	      <Parameter name="component names" type="Array(string)" value="{Tracer1,Tracer2}" />
+              <ParameterList name="sink" type="ParameterList">
+		<Parameter name="number of dofs" type="int" value="2"/>
+		<ParameterList name="dof 1 function">
+                  <ParameterList name="function-tabular" type="ParameterList">
+                    <Parameter name="y values" type="Array(double)" value="{0.001694,0.0}" /><!--Moles/sec-->
+                    <Parameter name="x values" type="Array(double)" value="{0.0,18000}" />
+                    <Parameter name="forms" type="Array(string)" value="{constant}" />
+                  </ParameterList>
+		</ParameterList>
+		<ParameterList name="dof 2 function">
+                  <ParameterList name="function-tabular" type="ParameterList">
+                    <Parameter name="y values" type="Array(double)" value="{0.001694,0.0}" /><!--Moles/sec-->
+                    <Parameter name="x values" type="Array(double)" value="{0.0,18000}" />
+                    <Parameter name="forms" type="Array(string)" value="{constant}" />
+                  </ParameterList>
+		</ParameterList>
+              </ParameterList>
+	    </ParameterList>
+
+	    <ParameterList name="SOURCE: Tracer region3" type="ParameterList">
+	      <Parameter name="regions" type="Array(string)" value="{tracer source stream_5_7}" />
+              <Parameter name="spatial distribution method" type="string" value="volume" />
+	      <Parameter name="component names" type="Array(string)" value="{Tracer1,Tracer2}" />
+              <ParameterList name="sink" type="ParameterList">
+		<Parameter name="number of dofs" type="int" value="2"/>
+		<ParameterList name="dof 1 function">
+                  <ParameterList name="function-tabular" type="ParameterList">
+                    <Parameter name="y values" type="Array(double)" value="{0.001759,0.0}" /><!--Moles/sec-->
+                    <Parameter name="x values" type="Array(double)" value="{0.0,18000}" />
+                    <Parameter name="forms" type="Array(string)" value="{constant}" />
+                  </ParameterList>
+		</ParameterList>
+		<ParameterList name="dof 2 function">
+                  <ParameterList name="function-tabular" type="ParameterList">
+                    <Parameter name="y values" type="Array(double)" value="{0.001759,0.0}" /><!--Moles/sec-->
+                    <Parameter name="x values" type="Array(double)" value="{0.0,18000}" />
+                    <Parameter name="forms" type="Array(string)" value="{constant}" />
+                  </ParameterList>
+		</ParameterList>
+              </ParameterList>
+	    </ParameterList>
+
+	    <ParameterList name="SOURCE: Tracer region4" type="ParameterList">
+	      <Parameter name="regions" type="Array(string)" value="{tracer source stream_8_9}" />
+              <Parameter name="spatial distribution method" type="string" value="volume" />
+	      <Parameter name="component names" type="Array(string)" value="{Tracer1,Tracer2}" />
+              <ParameterList name="sink" type="ParameterList">
+		<Parameter name="number of dofs" type="int" value="2"/>
+		<ParameterList name="dof 1 function">
+                  <ParameterList name="function-tabular" type="ParameterList">
+                    <Parameter name="y values" type="Array(double)" value="{0.002399,0.0}" /><!--Moles/sec-->
+                    <Parameter name="x values" type="Array(double)" value="{0.0,18000}" />
+                    <Parameter name="forms" type="Array(string)" value="{constant}" />
+                  </ParameterList>
+		</ParameterList>
+		<ParameterList name="dof 2 function">
+                  <ParameterList name="function-tabular" type="ParameterList">
+                    <Parameter name="y values" type="Array(double)" value="{0.002399,0.0}" /><!--Moles/sec-->
+                    <Parameter name="x values" type="Array(double)" value="{0.0,18000}" />
+                    <Parameter name="forms" type="Array(string)" value="{constant}" />
+                  </ParameterList>
+		</ParameterList>
+              </ParameterList>
+	    </ParameterList>
+
+	    <ParameterList name="SOURCE: Tracer region5" type="ParameterList">
+	      <Parameter name="regions" type="Array(string)" value="{tracer source stream_11_12}" />
+              <Parameter name="spatial distribution method" type="string" value="volume" />
+	      <Parameter name="component names" type="Array(string)" value="{Tracer1,Tracer2}" />
+              <ParameterList name="sink" type="ParameterList">
+		<Parameter name="number of dofs" type="int" value="2"/>
+		<ParameterList name="dof 1 function">
+                  <ParameterList name="function-tabular" type="ParameterList">
+                    <Parameter name="y values" type="Array(double)" value="{0.001105,0.0}" /><!--Moles/sec-->
+                    <Parameter name="x values" type="Array(double)" value="{0.0,18000}" />
+                    <Parameter name="forms" type="Array(string)" value="{constant}" />
+                  </ParameterList>
+		</ParameterList>
+		<ParameterList name="dof 2 function">
+                  <ParameterList name="function-tabular" type="ParameterList">
+                    <Parameter name="y values" type="Array(double)" value="{0.001105,0.0}" /><!--Moles/sec-->
+                    <Parameter name="x values" type="Array(double)" value="{0.0,18000}" />
+                    <Parameter name="forms" type="Array(string)" value="{constant}" />
+                  </ParameterList>
+		</ParameterList>
+              </ParameterList>
+	    </ParameterList>
+
+	    <ParameterList name="SOURCE: Tracer region6" type="ParameterList">
+	      <Parameter name="regions" type="Array(string)" value="{tracer source stream_14_15}" />
+              <Parameter name="spatial distribution method" type="string" value="volume" />
+	      <Parameter name="component names" type="Array(string)" value="{Tracer1,Tracer2}" />
+              <ParameterList name="sink" type="ParameterList">
+		<Parameter name="number of dofs" type="int" value="2"/>
+		<ParameterList name="dof 1 function">
+                  <ParameterList name="function-tabular" type="ParameterList">
+                    <Parameter name="y values" type="Array(double)" value="{0.001226,0.0}" /><!--Moles/sec-->
+                    <Parameter name="x values" type="Array(double)" value="{0.0,18000}" />
+                    <Parameter name="forms" type="Array(string)" value="{constant}" />
+                  </ParameterList>
+		</ParameterList>
+		<ParameterList name="dof 2 function">
+                  <ParameterList name="function-tabular" type="ParameterList">
+                    <Parameter name="y values" type="Array(double)" value="{0.001226,0.0}" /><!--Moles/sec-->
+                    <Parameter name="x values" type="Array(double)" value="{0.0,18000}" />
+                    <Parameter name="forms" type="Array(string)" value="{constant}" />
+                  </ParameterList>
+		</ParameterList>
+              </ParameterList>
+	    </ParameterList>
+
+	    <ParameterList name="SOURCE: Tracer region7" type="ParameterList">
+	      <Parameter name="regions" type="Array(string)" value="{tracer source stream_16_20}" />
+              <Parameter name="spatial distribution method" type="string" value="volume" />
+	      <Parameter name="component names" type="Array(string)" value="{Tracer1,Tracer2}" />
+              <ParameterList name="sink" type="ParameterList">
+		<Parameter name="number of dofs" type="int" value="2"/>
+		<ParameterList name="dof 1 function">
+                  <ParameterList name="function-tabular" type="ParameterList">
+                    <Parameter name="y values" type="Array(double)" value="{0.00083443,0.0}" /><!--Moles/sec-->
+                    <Parameter name="x values" type="Array(double)" value="{0.0,18000}" />
+                    <Parameter name="forms" type="Array(string)" value="{constant}" />
+                  </ParameterList>
+		</ParameterList>
+		<ParameterList name="dof 2 function">
+                  <ParameterList name="function-tabular" type="ParameterList">
+                    <Parameter name="y values" type="Array(double)" value="{0.00083443,0.0}" /><!--Moles/sec-->
+                    <Parameter name="x values" type="Array(double)" value="{0.0,18000}" />
+                    <Parameter name="forms" type="Array(string)" value="{constant}" />
+                  </ParameterList>
+		</ParameterList>
+              </ParameterList>
+	    </ParameterList>
+
+	    <ParameterList name="SOURCE: Tracer region8" type="ParameterList">
+	      <Parameter name="regions" type="Array(string)" value="{tracer source stream_17_18}" />
+              <Parameter name="spatial distribution method" type="string" value="volume" />
+	      <Parameter name="component names" type="Array(string)" value="{Tracer1,Tracer2}" />
+              <ParameterList name="sink" type="ParameterList">
+		<Parameter name="number of dofs" type="int" value="2"/>
+		<ParameterList name="dof 1 function">
+                  <ParameterList name="function-tabular" type="ParameterList">
+                    <Parameter name="y values" type="Array(double)" value="{0.0029362,0.0}" /><!--Moles/sec-->
+                    <Parameter name="x values" type="Array(double)" value="{0.0,18000}" />
+                    <Parameter name="forms" type="Array(string)" value="{constant}" />
+                  </ParameterList>
+		</ParameterList>
+		<ParameterList name="dof 2 function">
+                  <ParameterList name="function-tabular" type="ParameterList">
+                    <Parameter name="y values" type="Array(double)" value="{0.0029362,0.0}" /><!--Moles/sec-->
+                    <Parameter name="x values" type="Array(double)" value="{0.0,18000}" />
+                    <Parameter name="forms" type="Array(string)" value="{constant}" />
+                  </ParameterList>
+		</ParameterList>
+              </ParameterList>
+	    </ParameterList>
+
+	    <ParameterList name="SOURCE: Tracer region9" type="ParameterList">
+	      <Parameter name="regions" type="Array(string)" value="{tracer source stream_17_19}" />
+              <Parameter name="spatial distribution method" type="string" value="volume" />
+	      <Parameter name="component names" type="Array(string)" value="{Tracer1,Tracer2}" />
+              <ParameterList name="sink" type="ParameterList">
+		<Parameter name="number of dofs" type="int" value="2"/>
+		<ParameterList name="dof 1 function">
+                  <ParameterList name="function-tabular" type="ParameterList">
+                    <Parameter name="y values" type="Array(double)" value="{0.002197,0.0}" /><!--Moles/sec-->
+                    <Parameter name="x values" type="Array(double)" value="{0.0,18000}" />
+                    <Parameter name="forms" type="Array(string)" value="{constant}" />
+                  </ParameterList>
+		</ParameterList>
+		<ParameterList name="dof 2 function">
+                  <ParameterList name="function-tabular" type="ParameterList">
+                    <Parameter name="y values" type="Array(double)" value="{0.002197,0.0}" /><!--Moles/sec-->
+                    <Parameter name="x values" type="Array(double)" value="{0.0,18000}" />
+                    <Parameter name="forms" type="Array(string)" value="{constant}" />
+                  </ParameterList>
+		</ParameterList>
+              </ParameterList>
+	    </ParameterList>
+
+	    <ParameterList name="SOURCE: Tracer region10" type="ParameterList">
+	      <Parameter name="regions" type="Array(string)" value="{tracer source stream_21_22}" />
+              <Parameter name="spatial distribution method" type="string" value="volume" />
+	      <Parameter name="component names" type="Array(string)" value="{Tracer1,Tracer2}" />
+              <ParameterList name="sink" type="ParameterList">
+		<Parameter name="number of dofs" type="int" value="2"/>
+		<ParameterList name="dof 1 function">
+                  <ParameterList name="function-tabular" type="ParameterList">
+                    <Parameter name="y values" type="Array(double)" value="{0.0008958,0.0}" /><!--Moles/sec-->
+                    <Parameter name="x values" type="Array(double)" value="{0.0,18000}" />
+                    <Parameter name="forms" type="Array(string)" value="{constant}" />
+                  </ParameterList>
+		</ParameterList>
+		<ParameterList name="dof 2 function">
+                  <ParameterList name="function-tabular" type="ParameterList">
+                    <Parameter name="y values" type="Array(double)" value="{0.0008958,0.0}" /><!--Moles/sec-->
+                    <Parameter name="x values" type="Array(double)" value="{0.0,18000}" />
+                    <Parameter name="forms" type="Array(string)" value="{constant}" />
+                  </ParameterList>
+		</ParameterList>
+              </ParameterList>
+	    </ParameterList>
+
+	    <ParameterList name="SOURCE: Tracer region11" type="ParameterList">
+	      <Parameter name="regions" type="Array(string)" value="{tracer source stream_21_23}" />
+              <Parameter name="spatial distribution method" type="string" value="volume" />
+	      <Parameter name="component names" type="Array(string)" value="{Tracer1,Tracer2}" />
+              <ParameterList name="sink" type="ParameterList">
+		<Parameter name="number of dofs" type="int" value="2"/>
+		<ParameterList name="dof 1 function">
+                  <ParameterList name="function-tabular" type="ParameterList">
+                    <Parameter name="y values" type="Array(double)" value="{0.001595,0.0}" /><!--Moles/sec-->
+                    <Parameter name="x values" type="Array(double)" value="{0.0,18000}" />
+                    <Parameter name="forms" type="Array(string)" value="{constant}" />
+                  </ParameterList>
+		</ParameterList>
+		<ParameterList name="dof 2 function">
+                  <ParameterList name="function-tabular" type="ParameterList">
+                    <Parameter name="y values" type="Array(double)" value="{0.001595,0.0}" /><!--Moles/sec-->
+                    <Parameter name="x values" type="Array(double)" value="{0.0,18000}" />
+                    <Parameter name="forms" type="Array(string)" value="{constant}" />
+                  </ParameterList>
+		</ParameterList>
+              </ParameterList>
+	    </ParameterList>
+	    
 	    <!-- output sink term : alpha -->
             <ParameterList name="SINK: to subgrid" type="ParameterList">
               <Parameter name="regions" type="Array(string)" value="{surface domain}" />
