@@ -23,11 +23,11 @@
       </ParameterList>
     </ParameterList>
     <ParameterList name="subgrid" type="ParameterList">
-      <Parameter name="mesh type" type="string" value="subgrid" />
-      <ParameterList name="subgrid parameters" type="ParameterList">
+      <Parameter name="mesh type" type="string" value="domain set" />
+      <ParameterList name="domain set parameters" type="ParameterList">
         <Parameter name="entity kind" type="string" value="CELL" />
         <Parameter name="parent domain" type="string" value="surface" />
-        <Parameter name="subgrid region name" type="string" value="surface domain" />
+	<Parameter name="entity set names" type="Array(string)" value="{surface domain}" />
         <ParameterList name="subgrid_*" type="ParameterList">
           <Parameter name="mesh type" type="string" value="logical mesh" />
           <ParameterList name="logical mesh parameters" type="ParameterList">
@@ -179,9 +179,9 @@
         <Parameter name="limiter extension for transport" type="bool" value="true" />
       </ParameterList>
       
-      <ParameterList name="molecular diffusion" type="ParameterList">
+      <ParameterList name="molecular diffusion" type="ParameterList"><!--
         <Parameter name="aqueous names" type="Array(string)" value="{}" />
-        <Parameter name="aqueous values" type="Array(double)" value="{}" />
+        <Parameter name="aqueous values" type="Array(double)" value="{}" />-->
       </ParameterList>
       
 
@@ -247,7 +247,7 @@
         <Parameter name="limiter" type="string" value="tensorial" />
         <Parameter name="limiter extension for transport" type="bool" value="true" />
       </ParameterList>
-      
+      <!--
       <ParameterList name="molecular diffusion">
         <Parameter name="aqueous names" type="Array(string)" value="{Tracer1}"/>
         <Parameter name="aqueous values" type="Array(double)" value="{1e-1}"/>
@@ -273,7 +273,7 @@
           </ParameterList>
         </ParameterList>
       </ParameterList>
-      
+      -->
       <ParameterList name="source terms" type="ParameterList">
         <ParameterList name="concentration" type="ParameterList">
           <ParameterList name="Tracer1" type="ParameterList">
@@ -291,7 +291,7 @@
               </ParameterList>
             </ParameterList>
 
-            <!-- output sink term -->
+            
             <ParameterList name="SINK: to subgrid" type="ParameterList">
               <Parameter name="regions" type="Array(string)" value="{surface domain}" />
               <Parameter name="spatial distribution method" type="string" value="exponential decay" />
@@ -300,14 +300,14 @@
                 <Parameter name="domain name" type="string" value="surface" />
                 <ParameterList name="function" type="ParameterList">
                   <ParameterList name="function-constant" type="ParameterList">
-                    <Parameter name="value" type="double" value="1.7e-5" /><!-- alpha -->
-                    <Parameter name="Vvalue" type="double" value="0.0" /><!-- alpha -->
+                    <Parameter name="value" type="double" value="1.7e-5" />
+                    <Parameter name="Vvalue" type="double" value="0.0" />
                   </ParameterList>
                 </ParameterList>
               </ParameterList>
             </ParameterList>
 
-            <!-- input source term -->
+            
             <ParameterList name="SOURCE: from subgrid" type="ParameterList">
               <Parameter name="regions" type="Array(string)" value="{surface domain}" />
               <Parameter name="spatial distribution method" type="string" value="subgrid return" />
@@ -317,8 +317,8 @@
                 <Parameter name="domain subgrid field" type="string" value="subgrid" />
                 <ParameterList name="function" type="ParameterList">
                   <ParameterList name="function-constant" type="ParameterList">
-                    <Parameter name="value" type="double" value="1.7e-5" /><!-- alpha -->
-		    <Parameter name="Vvalue" type="double" value="0.0" /><!-- alpha -->
+                    <Parameter name="value" type="double" value="1.7e-5" />
+		    <Parameter name="Vvalue" type="double" value="0.0" />
                   </ParameterList>
                 </ParameterList>
               </ParameterList>

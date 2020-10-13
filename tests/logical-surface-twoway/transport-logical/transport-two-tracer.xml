@@ -23,25 +23,33 @@
       </ParameterList>
     </ParameterList>
     <ParameterList name="subgrid" type="ParameterList">
-      <Parameter name="mesh type" type="string" value="subgrid" />
-      <ParameterList name="subgrid parameters" type="ParameterList">
+      <Parameter name="mesh type" type="string" value="domain set" />
+      <ParameterList name="domain set parameters" type="ParameterList">
         <Parameter name="entity kind" type="string" value="CELL" />
         <Parameter name="parent domain" type="string" value="surface" />
-        <Parameter name="subgrid region name" type="string" value="surface domain" />
+	<Parameter name="entity set names" type="Array(string)" value="{surface domain}" />
         <ParameterList name="subgrid_*" type="ParameterList">
           <Parameter name="mesh type" type="string" value="logical mesh" />
           <ParameterList name="logical mesh parameters" type="ParameterList">
 	    <Parameter name="infer cell centroids" type="bool" value="true"/>
 	    <ParameterList name="segments">
 	      <ParameterList name="tau_space">
-		<Parameter name="number of cells" type="int" value="20"/>
+		<Parameter name="number of cells" type="int" value="10"/>
 		<Parameter name="cross sectional area [m^2]" type="double" value="1.0"/>
 		<Parameter name="first tip" type="Array(double)" value="{0.,0.,0.}"/>
 		<Parameter name="orientation" type="Array(double)" value="{0.,0.,1.}"/>
 		<Parameter name="first tip type" type="string" value="boundary"/>
 		<Parameter name="last tip type" type="string" value="boundary"/>
-		<Parameter name="cell lengths [m]" type="Array(double)" value="{3649.63, 1805.57, 1626.54, 1613.26, 1678.51, 1801.08, 1978.1, 2215.79, 2527.87, 2937.04, 3479.01, 4210.42, 5224.11, 6679.84, 8870.96, 12384.6, 18542.1, 30867.6, 61695.7, 185036.}"/>
+		<Parameter name="20old cell lengths [m]" type="Array(double)" value="{3649.63, 1805.57, 1626.54, 1613.26, 1678.51, 1801.08, 1978.1, 2215.79, 2527.87, 2937.04, 3479.01, 4210.42, 5224.11, 6679.84, 8870.96, 12384.6, 18542.1, 30867.6, 61695.7, 185036.}"/>
+
+		<!-- halflife 0.5 hours -->
+		<Parameter name="10cell lengths [m]" type="Array(double)" value="{210.753313,176.5114318,168.8931256,186.4896097,220.1861136,275.1055446,367.0341783,538.1760527,934.6660146,2577.751175}"/>
+		<Parameter name="20cell lengths [m]" type="Array(double)" value="{1537.884504,1049.998807,867.8074832,832.14645,841.3988144, 875.8790969,930.0825922,1003.366185,1097.767993,1217.638405,1370.106499,1566.334935,1824.008974,2172.246936,2661.900731,3389.383131,4559.964327,6693.867706,11566.29735,31446.39918}"/>
+		
+		<Parameter name="cell lengths [m]" type="Array(double)" value="{1299.950938,807.5821923,630.8773375,576.9142941,557.3226868,553.9754424,560.560913,574.394901,594.2796682,619.7647024,650.8517264,687.8737412,731.4567072,782.5306872,842.3806035,912.739259,995.9355831,1095.124002,1214.641521,1360.576261,1541.702722,1771.085423,2068.972382,2468.355124,3026.533184,3851.771838,5173.961715,7574.207597,13029.34244,35134.67091}"/>
+		
 	      </ParameterList>
+	      
 	    </ParameterList>
 	    <ParameterList name="sets" type="ParameterList">
             </ParameterList>
