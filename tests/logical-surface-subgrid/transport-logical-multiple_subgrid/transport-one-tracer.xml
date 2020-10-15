@@ -406,8 +406,8 @@
                 <Parameter name="domain name" type="string" value="surface" />
                 <ParameterList name="function" type="ParameterList">
                   <ParameterList name="function-constant" type="ParameterList">
-                    <Parameter name="value" type="double" value="1.7e-5" />
-                    <Parameter name="Vvalue" type="double" value="0.0" />
+                    <Parameter name="Vvalue" type="double" value="1.7e-5" />
+                    <Parameter name="value" type="double" value="8.5e-06" />
                   </ParameterList>
                 </ParameterList>
               </ParameterList>
@@ -424,8 +424,8 @@
 <!--                <Parameter name="domain subgrid field" type="string" value="subgrid_1" />-->
                 <ParameterList name="function" type="ParameterList">
                   <ParameterList name="function-constant" type="ParameterList">
-                    <Parameter name="value" type="double" value="1.7e-5" />
-		    <Parameter name="Vvalue" type="double" value="0.0" />
+                    <Parameter name="Vvalue" type="double" value="1.7e-5" />
+		    <Parameter name="value" type="double" value="8.5e-06" />
                   </ParameterList>
                 </ParameterList>
               </ParameterList>
@@ -439,8 +439,8 @@
                 <Parameter name="domain name" type="string" value="surface" />
                 <ParameterList name="function" type="ParameterList">
                   <ParameterList name="function-constant" type="ParameterList">
-                    <Parameter name="value" type="double" value="0" />
-                    <Parameter name="Vvalue" type="double" value="0.0" />
+                    <Parameter name="value" type="double" value="1.7e-5" />
+		     <Parameter name="Vvalue" type="double" value="8.5e-06" />
                   </ParameterList>
                 </ParameterList>
               </ParameterList>
@@ -456,8 +456,8 @@
 		<Parameter name="subgrid field prefix" type="string" value="subgrid_2" />
                 <ParameterList name="function" type="ParameterList">
                   <ParameterList name="function-constant" type="ParameterList">
-                    <Parameter name="value" type="double" value="0" />
-		    <Parameter name="Vvalue" type="double" value="0.0" />
+                    <Parameter name="value" type="double" value="1.7e-5" />
+		    <Parameter name="Vvalue" type="double" value="8.5e-06" />
                   </ParameterList>
                 </ParameterList>
               </ParameterList>
