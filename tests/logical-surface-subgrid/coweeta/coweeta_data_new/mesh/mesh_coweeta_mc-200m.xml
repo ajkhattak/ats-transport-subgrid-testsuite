@@ -1,0 +1,270 @@
+<ParameterList name="Main">
+  <Parameter name="infer cell centroids" type="bool" value="true"/>
+  <ParameterList name="segments">
+    <ParameterList name="stream_1_2">
+      <Parameter name="segment length [m]" type="double" value="2825.0"/>
+      <Parameter name="number of cells" type="int" value="16"/>
+      <Parameter name="orientation" type="Array(double)" value="{1,0,0}"/>
+      <Parameter name="cross sectional area [m^2]" type="double" value="0.8163220080526847"/>
+      <Parameter name="first tip type" type="string" value="boundary"/>
+      <Parameter name="last tip type" type="string" value="junction"/>
+      <Parameter name="cell centroids" type="Array(double)" value="{-83.40520631431363, 35.05827421225077, 0.0, -83.40491091431252, 35.05782481224992, 0.0, -83.40612824764398, 35.059079112247986, 0.0, -83.40720178097564, 35.06042504557925, 0.0, -83.40836774764048, 35.06167797891064, 0.0, -83.4096311143052, 35.06287207890878, 0.0, -83.41121401430274, 35.06345744557453, 0.0, -83.41313214763309, 35.06345741224118, 0.0, -83.4150215809635, 35.063757445574055, 0.0, -83.41686234762733, 35.06377094557405, 0.0, -83.41866004762454, 35.0630053122419, 0.0, -83.42046554762172, 35.06226541224305, 0.0, -83.42225204761894, 35.06151901224422, 0.0, -83.42407144761611, 35.06086064557857, 0.0, -83.42600974761311, 35.06038967891263, 0.0, -83.42791664761015, 35.05992854557999, 0.0}"/>
+      <Parameter name="cell lengths [m]" type="Array(double)" value="{25.0, 163.3333, 188.3333, 188.3333, 188.3333, 188.3333, 188.3333, 188.3333, 188.3333, 188.3333, 188.3333, 188.3333, 188.3333, 188.3333, 188.3333, 188.3333}"/>
+    </ParameterList>
+    <ParameterList name="stream_2_3">
+      <Parameter name="first tip type" type="string" value="branch"/>
+      <Parameter name="first tip branch segment" type="string" value="stream_1_2"/>
+      <Parameter name="first tip branch segment tip" type="string" value="last"/>
+      <Parameter name="last tip type" type="string" value="junction"/>
+      <Parameter name="orientation" type="Array(double)" value="{1,0,0}"/>
+      <Parameter name="segment length [m]" type="double" value="619.0"/>
+      <Parameter name="number of cells" type="int" value="4"/>
+      <Parameter name="cross sectional area [m^2]" type="double" value="0.36615236094580733"/>
+      <Parameter name="cell centroids" type="Array(double)" value="{-83.42938814760785, 35.05927141224768, 0.0, -83.43026908093984, 35.058249912249266, 0.0, -83.4310477476053, 35.05712394558435, 0.0, -83.43194811427057, 35.05595704558618, 0.0}"/>
+      <Parameter name="cell lengths [m]" type="Array(double)" value="{154.75, 154.75, 154.75, 154.75}"/>
+    </ParameterList>
+    <ParameterList name="stream_2_11">
+      <Parameter name="first tip type" type="string" value="branch"/>
+      <Parameter name="first tip branch segment" type="string" value="stream_1_2"/>
+      <Parameter name="first tip branch segment tip" type="string" value="last"/>
+      <Parameter name="last tip type" type="string" value="junction"/>
+      <Parameter name="orientation" type="Array(double)" value="{1,0,0}"/>
+      <Parameter name="segment length [m]" type="double" value="1092.0"/>
+      <Parameter name="number of cells" type="int" value="6"/>
+      <Parameter name="cross sectional area [m^2]" type="double" value="0.4004007127485738"/>
+      <Parameter name="cell centroids" type="Array(double)" value="{-83.43005554760683, 35.060170678912954, 0.0, -83.43181541427077, 35.06065434557888, 0.0, -83.43346831426823, 35.06130174557788, 0.0, -83.43485611426607, 35.06219647890981, 0.0, -83.43642824759695, 35.06303924557517, 0.0, -83.4383405809273, 35.06338021224133, 0.0}"/>
+      <Parameter name="cell lengths [m]" type="Array(double)" value="{182.0, 182.0, 182.0, 182.0, 182.0, 182.0}"/>
+    </ParameterList>
+    <ParameterList name="stream_3_4">
+      <Parameter name="first tip type" type="string" value="branch"/>
+      <Parameter name="first tip branch segment" type="string" value="stream_2_3"/>
+      <Parameter name="first tip branch segment tip" type="string" value="last"/>
+      <Parameter name="last tip type" type="string" value="junction"/>
+      <Parameter name="orientation" type="Array(double)" value="{1,0,0}"/>
+      <Parameter name="segment length [m]" type="double" value="277.0"/>
+      <Parameter name="number of cells" type="int" value="2"/>
+      <Parameter name="cross sectional area [m^2]" type="double" value="0.3363141193639137"/>
+      <Parameter name="cell centroids" type="Array(double)" value="{-83.43303354760221, 35.05502217892098, 0.0, -83.43415621426712, 35.054258045588824, 0.0}"/>
+      <Parameter name="cell lengths [m]" type="Array(double)" value="{138.5, 138.5}"/>
+    </ParameterList>
+    <ParameterList name="stream_3_10">
+      <Parameter name="first tip type" type="string" value="branch"/>
+      <Parameter name="first tip branch segment" type="string" value="stream_2_3"/>
+      <Parameter name="first tip branch segment tip" type="string" value="last"/>
+      <Parameter name="last tip type" type="string" value="boundary"/>
+      <Parameter name="orientation" type="Array(double)" value="{1,0,0}"/>
+      <Parameter name="segment length [m]" type="double" value="945.0000000000001"/>
+      <Parameter name="number of cells" type="int" value="5"/>
+      <Parameter name="cross sectional area [m^2]" type="double" value="0.03006694550743245"/>
+      <Parameter name="cell centroids" type="Array(double)" value="{-83.43196881427053, 35.05466671225486, 0.0, -83.43091101427217, 35.0532167122571, 0.0, -83.43013561427338, 35.05167044559283, 0.0, -83.43030664760644, 35.050095945595274, 0.0, -83.43051654760612, 35.048505212264416, 0.0}"/>
+      <Parameter name="cell lengths [m]" type="Array(double)" value="{189.0, 189.0, 189.0, 189.0, 189.0}"/>
+    </ParameterList>
+    <ParameterList name="stream_4_5">
+      <Parameter name="first tip type" type="string" value="branch"/>
+      <Parameter name="first tip branch segment" type="string" value="stream_3_4"/>
+      <Parameter name="first tip branch segment tip" type="string" value="last"/>
+      <Parameter name="last tip type" type="string" value="junction"/>
+      <Parameter name="orientation" type="Array(double)" value="{1,0,0}"/>
+      <Parameter name="segment length [m]" type="double" value="1970.0"/>
+      <Parameter name="number of cells" type="int" value="10"/>
+      <Parameter name="cross sectional area [m^2]" type="double" value="0.1924396943885528"/>
+      <Parameter name="cell centroids" type="Array(double)" value="{-83.4352255475988, 35.05310251225728, 0.0, -83.43624368093057, 35.05158994559295, 0.0, -83.4373003475956, 35.05009004559528, 0.0, -83.43853851426033, 35.048742245597396, 0.0, -83.43994771425815, 35.0474651789327, 0.0, -83.44148441425577, 35.04628577893453, 0.0, -83.44340734758612, 35.0457210789354, 0.0, -83.44547608091625, 35.04542567893586, 0.0, -83.44737194757997, 35.044848445603435, 0.0, -83.4493370475769, 35.04433584560422, 0.0}"/>
+      <Parameter name="cell lengths [m]" type="Array(double)" value="{197.0, 197.0, 197.0, 197.0, 197.0, 197.0, 197.0, 197.0, 197.0, 197.0}"/>
+    </ParameterList>
+    <ParameterList name="stream_4_8">
+      <Parameter name="first tip type" type="string" value="branch"/>
+      <Parameter name="first tip branch segment" type="string" value="stream_3_4"/>
+      <Parameter name="first tip branch segment tip" type="string" value="last"/>
+      <Parameter name="last tip type" type="string" value="junction"/>
+      <Parameter name="orientation" type="Array(double)" value="{1,0,0}"/>
+      <Parameter name="segment length [m]" type="double" value="2900.0"/>
+      <Parameter name="number of cells" type="int" value="15"/>
+      <Parameter name="cross sectional area [m^2]" type="double" value="0.12654463237568553"/>
+      <Parameter name="cell centroids" type="Array(double)" value="{-83.43566324759811, 35.05354921225657, 0.0, -83.43757568092849, 35.05335511225687, 0.0, -83.43953438092547, 35.05329611225696, 0.0, -83.44127674758943, 35.052522145591496, 0.0, -83.44294131425352, 35.05151824559306, 0.0, -83.44462904758421, 35.05060591226115, 0.0, -83.44603954758202, 35.04945374559628, 0.0, -83.4474743475798, 35.0482421789315, 0.0, -83.44929714757697, 35.04757687893252, 0.0, -83.45129621424053, 35.0475757789325, 0.0, -83.45331124757072, 35.04751844559925, 0.0, -83.45529848090098, 35.04703181226668, 0.0, -83.45710264756485, 35.04615751226805, 0.0, -83.45873764756232, 35.0449631122699, 0.0, -83.46028528089323, 35.04364971227193, 0.0}"/>
+      <Parameter name="cell lengths [m]" type="Array(double)" value="{193.3333, 193.3333, 193.3333, 193.3333, 193.3333, 193.3333, 193.3333, 193.3333, 193.3333, 193.3333, 193.3333, 193.3333, 193.3333, 193.3333, 193.3333}"/>
+    </ParameterList>
+    <ParameterList name="stream_5_6">
+      <Parameter name="first tip type" type="string" value="branch"/>
+      <Parameter name="first tip branch segment" type="string" value="stream_4_5"/>
+      <Parameter name="first tip branch segment tip" type="string" value="last"/>
+      <Parameter name="last tip type" type="string" value="boundary"/>
+      <Parameter name="orientation" type="Array(double)" value="{1,0,0}"/>
+      <Parameter name="segment length [m]" type="double" value="819.0000000000001"/>
+      <Parameter name="number of cells" type="int" value="6"/>
+      <Parameter name="cross sectional area [m^2]" type="double" value="0.03935396817517269"/>
+      <Parameter name="cell centroids" type="Array(double)" value="{-83.45061908090824, 35.043620278938675, 0.0, -83.4510366809076, 35.04250077894042, 0.0, -83.45139438090706, 35.04136094560886, 0.0, -83.4515447809068, 35.0401689456107, 0.0, -83.45158268090674, 35.03895214561257, 0.0, -83.45158008090675, 35.03771244561449, 0.0}"/>
+      <Parameter name="cell lengths [m]" type="Array(double)" value="{163.8, 163.8, 163.8, 163.8, 163.8, 163.8}"/>
+    </ParameterList>
+    <ParameterList name="stream_5_7">
+      <Parameter name="first tip type" type="string" value="branch"/>
+      <Parameter name="first tip branch segment" type="string" value="stream_4_5"/>
+      <Parameter name="first tip branch segment tip" type="string" value="last"/>
+      <Parameter name="last tip type" type="string" value="boundary"/>
+      <Parameter name="orientation" type="Array(double)" value="{1,0,0}"/>
+      <Parameter name="segment length [m]" type="double" value="1655.0"/>
+      <Parameter name="number of cells" type="int" value="9"/>
+      <Parameter name="cross sectional area [m^2]" type="double" value="0.07236637782749487"/>
+      <Parameter name="cell centroids" type="Array(double)" value="{-83.45129708090721, 35.04392477893819, 0.0, -83.45311948090438, 35.04344557893893, 0.0, -83.45484458090169, 35.042786745606605, 0.0, -83.4562354475662, 35.041715412274925, 0.0, -83.45733841423115, 35.04038801227699, 0.0, -83.45837711422953, 35.03900184561249, 0.0, -83.45908584756177, 35.037487645614846, 0.0, -83.45944838089454, 35.035832145617405, 0.0, -83.46014188089347, 35.03426464561983, 0.0}"/>
+      <Parameter name="cell lengths [m]" type="Array(double)" value="{183.8889, 183.8889, 183.8889, 183.8889, 183.8889, 183.8889, 183.8889, 183.8889, 183.8889}"/>
+    </ParameterList>
+    <ParameterList name="stream_8_9">
+      <Parameter name="first tip type" type="string" value="branch"/>
+      <Parameter name="first tip branch segment" type="string" value="stream_4_8"/>
+      <Parameter name="first tip branch segment tip" type="string" value="last"/>
+      <Parameter name="last tip type" type="string" value="boundary"/>
+      <Parameter name="orientation" type="Array(double)" value="{1,0,0}"/>
+      <Parameter name="segment length [m]" type="double" value="1168.0000000000002"/>
+      <Parameter name="number of cells" type="int" value="6"/>
+      <Parameter name="cross sectional area [m^2]" type="double" value="0.06851824173774428"/>
+      <Parameter name="cell centroids" type="Array(double)" value="{-83.46147828089138, 35.04221791227417, 0.0, -83.46250818088981, 35.040751812276454, 0.0, -83.46361074755475, 35.03928884561205, 0.0, -83.46460851421986, 35.03776294561442, 0.0, -83.46555774755174, 35.03622061228347, 0.0, -83.4664148475504, 35.03459421228598, 0.0}"/>
+      <Parameter name="cell lengths [m]" type="Array(double)" value="{194.6667, 194.6667, 194.6667, 194.6667, 194.6667, 194.6667}"/>
+    </ParameterList>
+    <ParameterList name="stream_11_12">
+      <Parameter name="first tip type" type="string" value="branch"/>
+      <Parameter name="first tip branch segment" type="string" value="stream_2_11"/>
+      <Parameter name="first tip branch segment tip" type="string" value="last"/>
+      <Parameter name="last tip type" type="string" value="boundary"/>
+      <Parameter name="orientation" type="Array(double)" value="{1,0,0}"/>
+      <Parameter name="segment length [m]" type="double" value="1045.0000000000002"/>
+      <Parameter name="number of cells" type="int" value="6"/>
+      <Parameter name="cross sectional area [m^2]" type="double" value="0.035624209712113754"/>
+      <Parameter name="cell centroids" type="Array(double)" value="{-83.43999144759141, 35.06392471224049, 0.0, -83.44123881425614, 35.06504644557208, 0.0, -83.44228014758787, 35.066276945570166, 0.0, -83.44304544758668, 35.067624512234744, 0.0, -83.44318211425312, 35.06912084556575, 0.0, -83.44313884758651, 35.07066937889667, 0.0}"/>
+      <Parameter name="cell lengths [m]" type="Array(double)" value="{174.1667, 174.1667, 174.1667, 174.1667, 174.1667, 174.1667}"/>
+    </ParameterList>
+    <ParameterList name="stream_11_13">
+      <Parameter name="first tip type" type="string" value="branch"/>
+      <Parameter name="first tip branch segment" type="string" value="stream_2_11"/>
+      <Parameter name="first tip branch segment tip" type="string" value="last"/>
+      <Parameter name="last tip type" type="string" value="junction"/>
+      <Parameter name="orientation" type="Array(double)" value="{1,0,0}"/>
+      <Parameter name="segment length [m]" type="double" value="421.00000000000006"/>
+      <Parameter name="number of cells" type="int" value="3"/>
+      <Parameter name="cross sectional area [m^2]" type="double" value="0.33945737398362685"/>
+      <Parameter name="cell centroids" type="Array(double)" value="{-83.43988564759158, 35.06298857890857, 0.0, -83.44089714759002, 35.06213794557658, 0.0, -83.44200364758831, 35.061341712244484, 0.0}"/>
+      <Parameter name="cell lengths [m]" type="Array(double)" value="{140.3333, 140.3333, 140.3333}"/>
+    </ParameterList>
+    <ParameterList name="stream_13_14">
+      <Parameter name="first tip type" type="string" value="branch"/>
+      <Parameter name="first tip branch segment" type="string" value="stream_11_13"/>
+      <Parameter name="first tip branch segment tip" type="string" value="last"/>
+      <Parameter name="last tip type" type="string" value="junction"/>
+      <Parameter name="orientation" type="Array(double)" value="{1,0,0}"/>
+      <Parameter name="segment length [m]" type="double" value="165.0"/>
+      <Parameter name="number of cells" type="int" value="1"/>
+      <Parameter name="cross sectional area [m^2]" type="double" value="0.24954923641757704"/>
+      <Parameter name="cell centroids" type="Array(double)" value="{-83.44350378091931, 35.06101791224498, 0.0}"/>
+      <Parameter name="cell lengths [m]" type="Array(double)" value="{165.0}"/>
+    </ParameterList>
+    <ParameterList name="stream_13_21">
+      <Parameter name="first tip type" type="string" value="branch"/>
+      <Parameter name="first tip branch segment" type="string" value="stream_11_13"/>
+      <Parameter name="first tip branch segment tip" type="string" value="last"/>
+      <Parameter name="last tip type" type="string" value="junction"/>
+      <Parameter name="orientation" type="Array(double)" value="{1,0,0}"/>
+      <Parameter name="segment length [m]" type="double" value="775.0"/>
+      <Parameter name="number of cells" type="int" value="4"/>
+      <Parameter name="cross sectional area [m^2]" type="double" value="0.09095085110858311"/>
+      <Parameter name="cell centroids" type="Array(double)" value="{-83.443262214253, 35.060184112246276, 0.0, -83.4444350475845, 35.05882024558173, 0.0, -83.44596658091547, 35.05777757891667, 0.0, -83.44776314757934, 35.05700077891788, 0.0}"/>
+      <Parameter name="cell lengths [m]" type="Array(double)" value="{193.75, 193.75, 193.75, 193.75}"/>
+    </ParameterList>
+    <ParameterList name="stream_14_15">
+      <Parameter name="first tip type" type="string" value="branch"/>
+      <Parameter name="first tip branch segment" type="string" value="stream_13_14"/>
+      <Parameter name="first tip branch segment tip" type="string" value="last"/>
+      <Parameter name="last tip type" type="string" value="boundary"/>
+      <Parameter name="orientation" type="Array(double)" value="{1,0,0}"/>
+      <Parameter name="segment length [m]" type="double" value="1291.0000000000002"/>
+      <Parameter name="number of cells" type="int" value="7"/>
+      <Parameter name="cross sectional area [m^2]" type="double" value="0.04622924887712758"/>
+      <Parameter name="cell centroids" type="Array(double)" value="{-83.44504348091692, 35.061627945577385, 0.0, -83.44628854758164, 35.06289427890874, 0.0, -83.44724181424684, 35.06426017890661, 0.0, -83.44839414757837, 35.06548894557139, 0.0, -83.44988368090938, 35.066582345569685, 0.0, -83.45146238090695, 35.06753674556819, 0.0, -83.45325854757081, 35.06816571223388, 0.0}"/>
+      <Parameter name="cell lengths [m]" type="Array(double)" value="{184.4286, 184.4286, 184.4286, 184.4286, 184.4286, 184.4286, 184.4286}"/>
+    </ParameterList>
+    <ParameterList name="stream_14_16">
+      <Parameter name="first tip type" type="string" value="branch"/>
+      <Parameter name="first tip branch segment" type="string" value="stream_13_14"/>
+      <Parameter name="first tip branch segment tip" type="string" value="last"/>
+      <Parameter name="last tip type" type="string" value="junction"/>
+      <Parameter name="orientation" type="Array(double)" value="{1,0,0}"/>
+      <Parameter name="segment length [m]" type="double" value="987.0000000000001"/>
+      <Parameter name="number of cells" type="int" value="5"/>
+      <Parameter name="cross sectional area [m^2]" type="double" value="0.20248899279870614"/>
+      <Parameter name="cell centroids" type="Array(double)" value="{-83.44544544758296, 35.06088971224517, 0.0, -83.44756454757965, 35.06062184557891, 0.0, -83.44962924757644, 35.060388545579286, 0.0, -83.45163741424, 35.06004344557982, 0.0, -83.45357974757033, 35.06003114557984, 0.0}"/>
+      <Parameter name="cell lengths [m]" type="Array(double)" value="{197.4, 197.4, 197.4, 197.4, 197.4}"/>
+    </ParameterList>
+    <ParameterList name="stream_16_17">
+      <Parameter name="first tip type" type="string" value="branch"/>
+      <Parameter name="first tip branch segment" type="string" value="stream_14_16"/>
+      <Parameter name="first tip branch segment tip" type="string" value="last"/>
+      <Parameter name="last tip type" type="string" value="junction"/>
+      <Parameter name="orientation" type="Array(double)" value="{1,0,0}"/>
+      <Parameter name="segment length [m]" type="double" value="765.0"/>
+      <Parameter name="number of cells" type="int" value="4"/>
+      <Parameter name="cross sectional area [m^2]" type="double" value="0.1641051190892562"/>
+      <Parameter name="cell centroids" type="Array(double)" value="{-83.45550788090068, 35.06011134557974, 0.0, -83.45744024756434, 35.059628545580495, 0.0, -83.45922804756154, 35.05881371224842, 0.0, -83.46094428089222, 35.05777791225003, 0.0}"/>
+      <Parameter name="cell lengths [m]" type="Array(double)" value="{191.25, 191.25, 191.25, 191.25}"/>
+    </ParameterList>
+    <ParameterList name="stream_16_20">
+      <Parameter name="first tip type" type="string" value="branch"/>
+      <Parameter name="first tip branch segment" type="string" value="stream_14_16"/>
+      <Parameter name="first tip branch segment tip" type="string" value="last"/>
+      <Parameter name="last tip type" type="string" value="boundary"/>
+      <Parameter name="orientation" type="Array(double)" value="{1,0,0}"/>
+      <Parameter name="segment length [m]" type="double" value="787.0"/>
+      <Parameter name="number of cells" type="int" value="4"/>
+      <Parameter name="cross sectional area [m^2]" type="double" value="0.020599246486715468"/>
+      <Parameter name="cell centroids" type="Array(double)" value="{-83.45443358090233, 35.06116744557809, 0.0, -83.4547486475685, 35.062822478908856, 0.0, -83.45604521423314, 35.06406257890694, 0.0, -83.45776034756383, 35.06512177890531, 0.0}"/>
+      <Parameter name="cell lengths [m]" type="Array(double)" value="{196.75, 196.75, 196.75, 196.75}"/>
+    </ParameterList>
+    <ParameterList name="stream_17_18">
+      <Parameter name="first tip type" type="string" value="branch"/>
+      <Parameter name="first tip branch segment" type="string" value="stream_16_17"/>
+      <Parameter name="first tip branch segment tip" type="string" value="last"/>
+      <Parameter name="last tip type" type="string" value="boundary"/>
+      <Parameter name="orientation" type="Array(double)" value="{1,0,0}"/>
+      <Parameter name="segment length [m]" type="double" value="1035.0000000000002"/>
+      <Parameter name="number of cells" type="int" value="6"/>
+      <Parameter name="cross sectional area [m^2]" type="double" value="0.07199534283806251"/>
+      <Parameter name="cell centroids" type="Array(double)" value="{-83.4627479475561, 35.057320512250726, 0.0, -83.4646030475532, 35.057482912250464, 0.0, -83.46645658088366, 35.05757984558366, 0.0, -83.46836234754738, 35.057550045583696, 0.0, -83.47028524754441, 35.057608512250255, 0.0, -83.47216738087482, 35.05781501224996, 0.0}"/>
+      <Parameter name="cell lengths [m]" type="Array(double)" value="{172.5, 172.5, 172.5, 172.5, 172.5, 172.5}"/>
+    </ParameterList>
+    <ParameterList name="stream_17_19">
+      <Parameter name="first tip type" type="string" value="branch"/>
+      <Parameter name="first tip branch segment" type="string" value="stream_16_17"/>
+      <Parameter name="first tip branch segment tip" type="string" value="last"/>
+      <Parameter name="last tip type" type="string" value="boundary"/>
+      <Parameter name="orientation" type="Array(double)" value="{1,0,0}"/>
+      <Parameter name="segment length [m]" type="double" value="1173.0"/>
+      <Parameter name="number of cells" type="int" value="6"/>
+      <Parameter name="cross sectional area [m^2]" type="double" value="0.0651169621600101"/>
+      <Parameter name="cell centroids" type="Array(double)" value="{-83.46252278088977, 35.05663101225181, 0.0, -83.46354044755486, 35.05521804558734, 0.0, -83.4642171142205, 35.05361064558983, 0.0, -83.46476691421964, 35.05193284559243, 0.0, -83.46521724755226, 35.05022134559508, 0.0, -83.46580054755134, 35.04854084559767, 0.0}"/>
+      <Parameter name="cell lengths [m]" type="Array(double)" value="{195.5, 195.5, 195.5, 195.5, 195.5, 195.5}"/>
+    </ParameterList>
+    <ParameterList name="stream_21_22">
+      <Parameter name="first tip type" type="string" value="branch"/>
+      <Parameter name="first tip branch segment" type="string" value="stream_13_21"/>
+      <Parameter name="first tip branch segment tip" type="string" value="last"/>
+      <Parameter name="last tip type" type="string" value="boundary"/>
+      <Parameter name="orientation" type="Array(double)" value="{1,0,0}"/>
+      <Parameter name="segment length [m]" type="double" value="871.0"/>
+      <Parameter name="number of cells" type="int" value="6"/>
+      <Parameter name="cross sectional area [m^2]" type="double" value="0.024979953950850804"/>
+      <Parameter name="cell centroids" type="Array(double)" value="{-83.44942041424343, 35.05645674558539, 0.0, -83.45094231424108, 35.05617501225248, 0.0, -83.45247014757203, 35.05589414558625, 0.0, -83.45401724756962, 35.05566217891996, 0.0, -83.45560084756718, 35.05565517891998, 0.0, -83.45714378089812, 35.05543964558697, 0.0}"/>
+      <Parameter name="cell lengths [m]" type="Array(double)" value="{174.2, 174.2, 174.2, 174.2, 174.2, 174.2}"/>
+    </ParameterList>
+    <ParameterList name="stream_21_23">
+      <Parameter name="first tip type" type="string" value="branch"/>
+      <Parameter name="first tip branch segment" type="string" value="stream_13_21"/>
+      <Parameter name="first tip branch segment tip" type="string" value="last"/>
+      <Parameter name="last tip type" type="string" value="boundary"/>
+      <Parameter name="orientation" type="Array(double)" value="{1,0,0}"/>
+      <Parameter name="segment length [m]" type="double" value="1362.0"/>
+      <Parameter name="number of cells" type="int" value="7"/>
+      <Parameter name="cross sectional area [m^2]" type="double" value="0.06276187165492346"/>
+      <Parameter name="cell centroids" type="Array(double)" value="{-83.44866114757795, 35.055781245586445, 0.0, -83.44911758091058, 35.054194745588916, 0.0, -83.45030718090874, 35.05280147892441, 0.0, -83.45185308090635, 35.051609278926236, 0.0, -83.45343318090389, 35.050454578928026, 0.0, -83.45514308090122, 35.04965097892929, 0.0, -83.45707108089823, 35.04911697893013, 0.0}"/>
+      <Parameter name="cell lengths [m]" type="Array(double)" value="{194.5714, 194.5714, 194.5714, 194.5714, 194.5714, 194.5714, 194.5714}"/>
+    </ParameterList>
+  </ParameterList>
+  <ParameterList name="sets" type="bool" value="true">
+    <Parameter name="fine_root" type="Array(string)" value="{stream_2_3, stream_2_11, stream_3_4, stream_3_10, stream_4_5, stream_4_8, stream_5_6, stream_5_7, stream_8_9, stream_11_12, stream_11_13, stream_13_14, stream_13_21, stream_14_15, stream_14_16, stream_16_17, stream_16_20, stream_17_18, stream_17_19, stream_21_22, stream_21_23}"/>
+  </ParameterList>
+</ParameterList>
